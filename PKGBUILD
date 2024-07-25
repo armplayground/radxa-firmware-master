@@ -31,16 +31,6 @@ md5sums=('SKIP')
 # Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
 # a description of each element in the source array.
 
-upstream_firmwares=(
-	"cypress/cyfmac43455-sdio.bin"
-	"cypress/cyfmac43455-sdio.clm_blob"
-	"r8a779x_usb3_v1.dlmem"
-	"r8a779x_usb3_v2.dlmem"
-	"r8a779x_usb3_v3.dlmem"
-	"rtw89/rtw8852b_fw.bin"
-	"arm/mali/arch10.8/mali_csffw.bin"
-)
-
 pkgver() {
 	cd "$srcdir/${_pkgname}"
 
@@ -52,13 +42,6 @@ pkgver() {
 
 # Git, tags available
 	printf "%s" "$(git describe --tags --long | sed 's/\([^-]*-\)g/r\1/;s/-/./g')"
-}
-
-prepare() {
-	echo "  ->  Removing upstreamed files..."
-	for f in "${upstream_firmwares[@]}"; do
-		rm "$srcdir/${_pkgname}/firmware/$f"
-	done
 }
 
 package() {
