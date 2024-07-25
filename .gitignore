@@ -1,0 +1,4 @@
+pkg/
+radxa-firmware-*.pkg.tar.zst
+radxa-firmware/
+src/
