@@ -8,7 +8,7 @@
 
 # Maintainer: Jesse R Codling <codling@umich.edu>
 _pkgname=radxa-firmware
-pkgname=$_pkgname-git
+pkgname=$_pkgname-master
 pkgver=0.2.21.r2.104ed72
 pkgrel=1
 pkgdesc="Supplemental firmwares for Radxa boards"
@@ -18,8 +18,8 @@ license=('custom')
 groups=()
 depends=()
 makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
-provides=("${pkgname%-git}")
-conflicts=("${pkgname%-git}")
+provides=("${pkgname%-master}")
+conflicts=("${pkgname%-master}")
 replaces=()
 backup=()
 options=()
