@@ -9,7 +9,7 @@
 # Maintainer: Jesse R Codling <codling@umich.edu>
 _pkgname=radxa-firmware
 pkgname=$_pkgname-master
-pkgver=0.2.21.r2.104ed72
+pkgver=0.2.22.r0.e84f1d9
 pkgrel=1
 pkgdesc="Supplemental firmwares for Radxa boards"
 arch=(any)
